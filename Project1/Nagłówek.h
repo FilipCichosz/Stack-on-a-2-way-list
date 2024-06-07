@@ -28,7 +28,7 @@ public:
     Element(T Key, Element<T>* Prev, Element<T>* Next) {
         key = Key;
         prev = Prev;
-        next = Next;One of my university's projects. It is STL container queue written on self implemented two way list. It has essential methods that are required for funct
+        next = Next;
     }
     //Destruktor klasy Element.
     ~Element() { next = nullptr; prev = nullptr; };
