@@ -1,0 +1,54 @@
+#include "Nag³ówek.h"
+
+int main() {
+	Stack<int> ara(30);
+	Stack<int> ble(30);
+	Stack<char> literki(40);
+	literki.push('a');
+	literki.push('b');
+	literki.push('c');
+	cout << "Zawartosc naszego stosu typu <char>: ";
+	cout << literki << endl;
+	cout << "Liczba elementow na naszym stosie typu <char>: ";
+	literki.show_counter();
+	cout << "Maksymalna pojemnosc naszego stosu typu <char>: ";
+	cout << literki.maxSize << endl;
+	ble.push(13);
+	cout << "Zawartosc naszego stosu typu <int> po dodaniu 1 elementu: ";
+	cout << ble << endl;
+	Stack<int> kopia(ble);
+	cout << "Zawartosc naszego stosu typu <int> skopiowanego z innego stosu jedno elementowego: ";
+	cout << kopia << endl;
+	ara.push(5);
+	cout << "Zawartosc nowego stosu typu <int> po dodaniu jednego elementu: ";
+	cout << ara << endl;
+	ara.push(1);
+	cout << "Zawartosc naszego stosu typu <int> po dodaniu drugiego elementu: ";
+	cout << ara << endl;
+	cout << "Wartosc szczytu naszego stosu typu <int>: ";
+	ara.peek();
+	int temp = ara.pop();
+	cout << "Wartosc sciagnieta ze szczytu naszego stosu typu <int> metoda pop(): ";
+	cout << temp << endl;
+	cout << "Zawartosc naszego stosu typu <int> po wykonaniu operacji pop(): ";
+	cout << ara << endl;
+	Stack<int> przyp(100);
+	przyp = ara;
+	cout << "Zawartosc nowego stosu typu <int> po wykonaniu operacji przypisania poprzedniego stosu: ";
+	cout << przyp << endl;
+	cout << "Statusy dwoch stosow na ktorych wykonywalismy operacje: ";
+	ara.status();
+	literki.status();
+	Stack<int> pusty(30);
+	cout << "Status nowego pustego stosu: ";
+	pusty.status();
+	Stack<int> pelny(3);
+	pelny.push(1);
+	pelny.push(2);
+	pelny.push(3);
+	cout << "Zawartosc nowego stosu typu <int> po wypelnienu go do poziomu capacity: ";
+	cout << pelny << endl;
+	cout << "Status tego stosu: ";
+	pelny.status();
+	return 0;
+}
